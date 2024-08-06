@@ -1,0 +1,22 @@
+{% extends 'common.html' %}
+<!--to register static tag-->
+{% load static %}
+
+{%block title%}
+EVENTS
+{%endblock%}
+
+{%block content%}
+<h2 class="text-center">EVENTS</h2>
+<div class="container">
+  {% for i in eve %}
+  <div class="card text-center" style="width: 35rem; display:inline-block; margin:10px;">
+    <img src="{{i.img.url}}" alt="" class="card-img-top" height="150px" width="200px">
+    <div class="card-body">
+      <h5 class="card-title">{{i.name}}</h5>
+      <p class="card-text">{{i.desc}}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{%endblock%}

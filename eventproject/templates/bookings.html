@@ -1,0 +1,17 @@
+{% extends 'common.html' %}
+
+{%block title%}
+BOOKINGS
+{%endblock%}
+
+{%block content%}
+  <div class="container p-3 text-center">
+    <h1>Book Your Events</h1><br>
+  <form action="" method="POST">
+    <!--csrf token for avoid security warnings-->
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class="btn text-center">Book Now</button>
+  </form>
+</div>
+{%endblock%}
